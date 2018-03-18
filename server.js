@@ -9,6 +9,9 @@ app.use(function (req, res, next) {
   res.set('Access-Control-Allow-Origin', '*');
   return next();
 });
+app.get('/', function (req, res) {
+  res.send('=P');
+});
 app.use(express.static(path.join(__dirname, '')));
-app.listen(9090);
-console.log('Listening on port 9090');
+app.listen(9100);
+console.log('Listening on port 9100');
