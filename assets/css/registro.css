@@ -20,12 +20,13 @@ label{font-weight: 500;}
 .list-group-item-item{padding-left: 12px}
 .list-group-item-item > a > i{padding-right: 5px}
 .panel-default>.panel-heading {color: #333;background-color: #FDFDFD;border-radius: 0px}
+.form-control { border-radius: 0px; }
 /*header*/
 header img { display:block; margin:auto; margin-top: 20px; margin-bottom: 40px}
 /*Registro Form*/
 .page-header { margin: 10px 0 20px; }
 body { padding-top:10px;}
-fieldset { border: thin solid #ccc; border-radius: 4px; padding: 20px; padding-left: 40px; background: #fbfbfb;}
+fieldset { border: thin solid #ccc; border-radius: 0px; padding: 20px; padding-left: 40px; background: #fbfbfb;}
 legend { color: #678;}
 .form-control { width: 95%;}
 label small { color: #678 !important;}
