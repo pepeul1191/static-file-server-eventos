@@ -16,6 +16,24 @@ function errorLog(error){
   this.emit("end");
 }
 
+gulp.task("login", function(){
+  //JS
+  //FONTS
+  //CSS
+  gulp.src([
+    MEDIA + "bower_components/bootstrap/dist/css/bootstrap.min.css",
+    MEDIA + "bower_components/font-awesome/css/font-awesome.min.css",
+    MEDIA + "assets/css/styles.css",
+    MEDIA + "assets/css/login.css",
+  ])
+  .pipe(plumber())
+  .pipe(concatCss("login-min.css"))
+  .pipe(replace("../../../font-awesome/fonts/", BASE_URL + "dist/"))
+  .pipe(replace("../fonts/glyphicons", "glyphicons"))
+  .pipe(minifyCss())
+  .pipe(gulp.dest(DESTINO));
+});
+
 gulp.task("app", function(){
   //JS
   gulp.src([
@@ -60,7 +78,7 @@ gulp.task("app", function(){
     MEDIA + 'bower_components/bootstrap/fonts/*',
   ])
   .pipe(gulp.dest(DESTINO));
-  //CSS y FONTS
+  //CSS
   gulp.src([
     MEDIA + "bower_components/bootstrap/dist/css/bootstrap.min.css",
     MEDIA + "bower_components/font-awesome/css/font-awesome.min.css",
