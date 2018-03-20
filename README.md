@@ -10,7 +10,11 @@ Crear 'dist' con Gulp:
 
 Arrancar aplicación servidor:
 
-	 $ npm start
+    $ npm start
+
+Tareas gulp:
+
+    $ gulp app
 
 ---
 
