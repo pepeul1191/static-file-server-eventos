@@ -25,19 +25,16 @@ var EventoView = Backbone.View.extend({
 		return template_compiled;
 	},
 	mostrarTabla: function(){
-    /*
 		tablaEvento.BorrarTable();
    	var ajax_dao_sistema = new AjaxPython();
-   	ajax_dao_sistema.Constructor("GET", BASE_URL + "accesos/sistema/listar", "", false);
+   	ajax_dao_sistema.Constructor("GET", BASE_URL + "evento/listar", "", false);
    	tablaEvento.SetTableId("tablaEvento");
    	tablaEvento.SetTableObj("tablaEvento");
-   	tablaEvento.SetTableHeader(sistema_array_json_th);
-   	tablaEvento.SetTableBody(sistema_array_json_td, sistema_array_json_btn_td, ajax_dao_sistema);
-   	tablaEvento.SetTableFooter(sistema_array_json_btn, false);
+   	tablaEvento.SetTableHeader(evento_array_json_th);
+   	tablaEvento.SetTableBody(evento_array_json_td, evento_array_json_btn_td, ajax_dao_sistema);
+   	tablaEvento.SetTableFooter(evento_array_json_btn, false);
    	tablaEvento.SetLabelMensaje("#txtMensajeRpta");
    	tablaEvento.SetURLGuardar(BASE_URL + "accesos/sistema/guardar");
-
    	tablaEvento.MostrarTable();
-    */
 	}
 });
