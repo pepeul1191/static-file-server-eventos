@@ -25,19 +25,16 @@ var EmpleadoView = Backbone.View.extend({
 		return template_compiled;
 	},
 	mostrarTabla: function(){
-    /*
 		tablaEmpleado.BorrarTable();
    	var ajax_dao_sistema = new AjaxPython();
-   	ajax_dao_sistema.Constructor("GET", BASE_URL + "accesos/sistema/listar", "", false);
+   	ajax_dao_sistema.Constructor("GET", BASE_URL + "empleado/listar", "", false);
    	tablaEmpleado.SetTableId("tablaEmpleado");
    	tablaEmpleado.SetTableObj("tablaEmpleado");
-   	tablaEmpleado.SetTableHeader(sistema_array_json_th);
-   	tablaEmpleado.SetTableBody(sistema_array_json_td, sistema_array_json_btn_td, ajax_dao_sistema);
-   	tablaEmpleado.SetTableFooter(sistema_array_json_btn, false);
+   	tablaEmpleado.SetTableHeader(empleado_array_json_th);
+   	tablaEmpleado.SetTableBody(empleado_array_json_td, empleado_array_json_btn_td, ajax_dao_sistema);
+   	tablaEmpleado.SetTableFooter(empleado_array_json_btn, false);
    	tablaEmpleado.SetLabelMensaje("#txtMensajeRpta");
    	tablaEmpleado.SetURLGuardar(BASE_URL + "accesos/sistema/guardar");
-
    	tablaEmpleado.MostrarTable();
-    */
 	}
 });
