@@ -25,19 +25,16 @@ var ExternoView = Backbone.View.extend({
 		return template_compiled;
 	},
 	mostrarTabla: function(){
-    /*
 		tablaExterno.BorrarTable();
-   	var ajax_dao_sistema = new AjaxPython();
-   	ajax_dao_sistema.Constructor("GET", BASE_URL + "accesos/sistema/listar", "", false);
+   	var ajax_dao_externo = new AjaxPython();
+   	ajax_dao_externo.Constructor("GET", BASE_URL + "externo/listar", "", false);
    	tablaExterno.SetTableId("tablaExterno");
    	tablaExterno.SetTableObj("tablaExterno");
-   	tablaExterno.SetTableHeader(sistema_array_json_th);
-   	tablaExterno.SetTableBody(sistema_array_json_td, sistema_array_json_btn_td, ajax_dao_sistema);
-   	tablaExterno.SetTableFooter(sistema_array_json_btn, false);
+   	tablaExterno.SetTableHeader(externo_array_json_th);
+   	tablaExterno.SetTableBody(externo_array_json_td, externo_array_json_btn_td, ajax_dao_externo);
+   	tablaExterno.SetTableFooter(externo_array_json_btn, false);
    	tablaExterno.SetLabelMensaje("#txtMensajeRpta");
    	tablaExterno.SetURLGuardar(BASE_URL + "accesos/sistema/guardar");
-
    	tablaExterno.MostrarTable();
-    */
 	}
 });
