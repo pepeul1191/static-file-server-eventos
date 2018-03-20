@@ -1,27 +1,50 @@
 var Router = Marionette.AppRouter.extend({
     routes: {
-        'email/:email': 'showEmail',
-        "" : "index",
-        /*
-        "sistema" : "sistemaIndex",
-        "accesos/sistemas/menu/:sistema_id" : "showSistemaMenu",
-        "accesos/sistemas/permiso/:sistema_id" : "showSistemaPermiso",
-        "accesos/sistemas/rol/:sistema_id" : "showSistemaRol",
-        "accesos/usuario/logs/:usuario_id" : "showUsuarioLog",
-        "accesos/usuario/editar/:usuario_id" : "showUsuarioDetalle",
-        "accesos/usuario/sistemas/:usuario_id" : "showUsuarioSistemas",
-        "accesos/usuario/roles_permisos/:usuario_id" : "showUsuarioRolesPermisos",
-        "usuario" : "usuarioIndex",
-        */
-        "*actions" : "index"
+      'email/:email': 'showEmail',
+      "" : "index",
+      "evento": "evento",
+      "alumno": "alumno",
+      "empleado": "empleado",
+      "externo": "externo",
+      /*
+      "sistema" : "sistemaIndex",
+      "accesos/sistemas/menu/:sistema_id" : "showSistemaMenu",
+      "accesos/sistemas/permiso/:sistema_id" : "showSistemaPermiso",
+      "accesos/sistemas/rol/:sistema_id" : "showSistemaRol",
+      "accesos/usuario/logs/:usuario_id" : "showUsuarioLog",
+      "accesos/usuario/editar/:usuario_id" : "showUsuarioDetalle",
+      "accesos/usuario/sistemas/:usuario_id" : "showUsuarioSistemas",
+      "accesos/usuario/roles_permisos/:usuario_id" : "showUsuarioRolesPermisos",
+      "usuario" : "usuarioIndex",
+      */
+      "*actions" : "index"
     },
     showEmail: function(email) {
         // show the email
-        alert(email);
+      alert(email);
     },
     index: function() {
         // show the email
-        alert('index');
+    },
+    evento: function() {
+      var eventoView = new EventoView({});
+      eventoView.render();
+      eventoView.mostrarTabla();
+    },
+    alumno: function() {
+      var alumnoView = new AlumnoView({});
+      alumnoView.render();
+      alumnoView.mostrarTabla();
+    },
+    empleado: function() {
+      var empleadoView = new EmpleadoView({});
+      empleadoView.render();
+      empleadoView.mostrarTabla();
+    },
+    externo: function() {
+      var externoView = new ExternoView({});
+      externoView.render();
+      externoView.mostrarTabla();
     },
     /*
     sistemaIndex: function(){
@@ -78,11 +101,11 @@ var Router = Marionette.AppRouter.extend({
 });
 
 var App = Marionette.Application.extend({
-    region: '#body-app',
-    onStart() {
-        var router = new Router();
-        Backbone.history.start();
-    }
+  region: '#body-app',
+  onStart() {
+    var router = new Router();
+    Backbone.history.start();
+  }
 });
 
 var myApp = new App();
