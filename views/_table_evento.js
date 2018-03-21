@@ -1,36 +1,28 @@
 var evento_array_json_th = [
 	{titulo:"id", index: "_id", estilos:"width: 10px; display:none;"},
 	{titulo:"Nombre",index:"nombre",estilos:"width: 250px;"},
-  {titulo:"Versión",index:"version",estilos:"width: 100px;"},
-  {titulo:"Repositorio",index:"repositorio",estilos:"width: 250px;"},
+  {titulo:"Dia Inicio",index:"dia_inicio",estilos:"width: 100px;"},
+  {titulo:"Dia Fin",index:"dia_fin",estilos:"width: 100px;"},
+	{titulo:"Hora Inicio",index:"hora_inicio",estilos:"width: 100px;"},
+  {titulo:"Hora Fin",index:"hora_fin",estilos:"width: 100px;"},
 	{titulo:"Botones",index:"NA",estilos:"width: 80px;"}
 ];
 
-/*
-_id
-nombre
-nombre_url
-dia_inicio
-dia_fin
-hora_inicio
-hora_fin
-lugar
-direccion
-*/
-
 var evento_array_json_td = [
 	{tipo:"label_id",estilos:"color: blue; display:none", index:"_id", edicion:""},
-	{tipo:"text",estilos:"width:250px;", index:"nombre", edicion:""},
-  {tipo:"text",estilos:"width:100px;", index:"version", edicion:""},
-  {tipo:"text",estilos:"width:250px;", index:"repositorio", edicion:""},
+	{tipo:"label",estilos:"width:250px;", index:"nombre", edicion:""},
+  {tipo:"label",estilos:"width:100px;", index:"dia_inicio", edicion:""},
+  {tipo:"label",estilos:"width:100px;", index:"dia_fin", edicion:""},
+	{tipo:"label",estilos:"width:100px;", index:"hora_inicio", edicion:""},
+	{tipo:"label",estilos:"width:100px;", index:"hora_fin", edicion:""},
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 
 var evento_array_json_btn_td = [
-	{clase:"fa fa-chevron-right", href:"#/evento/crear", alt:"Gestionar Menú",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
-	{clase:"fa fa-list",href:"#/accesos/sistemas/permiso/",alt:"Gestionar Permisos",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
-	{clase:"fa fa-id-card-o",href:"#/accesos/sistemas/rol/",alt:"Gestionar Roles",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
-	{clase:"fa fa-times",url:"",alt:"Eliminar capa",estilos:"padding-left: 2px;", operacion:"QuitarFila"}
+	{clase:"fa fa-pencil",href:"#/evento/editar/",alt:"Editar Evento",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
+	{clase:"fa fa-search",href:"#/evento/ver/",alt:"Previsualizar Evento",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
+	{clase:"fa fa-users",href:"#/evento/participantes/",alt:"Ver Participantes de Evento",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
+	{clase:"fa fa-times",url:"",alt:"Eliminar Evento",estilos:"padding-left: 2px;", operacion:"QuitarFila"}
 ];
 
 var evento_array_json_btn = [

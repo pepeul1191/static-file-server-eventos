@@ -34,7 +34,7 @@ var EventoView = Backbone.View.extend({
    	tablaEvento.SetTableBody(evento_array_json_td, evento_array_json_btn_td, ajax_dao_sistema);
    	tablaEvento.SetTableFooter(evento_array_json_btn, false);
    	tablaEvento.SetLabelMensaje("#txtMensajeRpta");
-   	tablaEvento.SetURLGuardar(BASE_URL + "accesos/sistema/guardar");
+   	tablaEvento.SetURLGuardar(BASE_URL + "evento/guardar");
    	tablaEvento.MostrarTable();
 	}
 });

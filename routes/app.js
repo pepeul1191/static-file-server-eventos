@@ -6,6 +6,9 @@ var Router = Marionette.AppRouter.extend({
       "" : "index",
       "evento": "evento",
       "evento/crear" : "eventoCrear",
+      "evento/editar/:evento_id" : "eventoEditar",
+      "evento/ver/:evento_id" : "eventoVer",
+      "evento/participantes/:evento_id" : "eventoParticipantes",
       "alumno": "alumno",
       "empleado": "empleado",
       "externo": "externo",
@@ -44,14 +47,27 @@ var Router = Marionette.AppRouter.extend({
       externoView.render();
       externoView.mostrarTabla();
     },
-    /*
-    showUsuarioRolesPermisos: function(usuario_id){
-        var usuarioRolPermisoView = new UsuarioRolPermisoView({});
-        usuarioRolPermisoView.render(usuario_id);
-        $("#idUsuario").html(usuario_id);
-        //usuarioDetalleView.mostrarTabla(usuario_id);
+    eventoEditar: function(evento_id){
+      alert("eventoEditar" + evento_id);
+      //var usuarioRolPermisoView = new UsuarioRolPermisoView({});
+      //usuarioRolPermisoView.render(usuario_id);
+      //$("#idUsuario").html(usuario_id);
+      //usuarioDetalleView.mostrarTabla(usuario_id);
     },
-    */
+    eventoVer: function(evento_id){
+      alert("eventoVer" + evento_id);
+      //var usuarioRolPermisoView = new UsuarioRolPermisoView({});
+      //usuarioRolPermisoView.render(usuario_id);
+      //$("#idUsuario").html(usuario_id);
+      //usuarioDetalleView.mostrarTabla(usuario_id);
+    },
+    eventoParticipantes: function(evento_id){
+      alert("eventoParticipantes" + evento_id);
+      //var usuarioRolPermisoView = new UsuarioRolPermisoView({});
+      //usuarioRolPermisoView.render(usuario_id);
+      //$("#idUsuario").html(usuario_id);
+      //usuarioDetalleView.mostrarTabla(usuario_id);
+    },
 });
 
 var App = Marionette.Application.extend({
