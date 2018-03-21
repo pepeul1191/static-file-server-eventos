@@ -5,6 +5,9 @@ var EventoDetalleView = Backbone.View.extend({
 		//console.log("initialize");
 		this.model = new Evento();
 	},
+	events: {
+		"click #btnGuardarDetalleEvento": "guardarDetalleEvento"
+	},
 	render: function() {
 		this.$el.html(this.getTemplate());
 		return this;
@@ -22,7 +25,10 @@ var EventoDetalleView = Backbone.View.extend({
 		return template;
 	},
   renderCrear: function() {
-    var context = {titulo_modal: "Crear Evento"};
+    var context = {
+			id: "E",
+			titulo_modal: "Crear Evento",
+		};
     $("#btnModal").click();
 		this.$el.html(this.getTemplate());
 		var source = $("#evento-detelle-template").html();
@@ -92,4 +98,32 @@ var EventoDetalleView = Backbone.View.extend({
 		});
 		CKEDITOR.replace('txtDescripcionEvento');
 	},
+	guardarDetalleEvento: function(){
+		var evento = {
+			id: $("#lblIdEvento").html(),
+			nombre: $("#txtNombre").val(),
+			nombre_url: $("#txtNombreURL").val(),
+			lugar: $("#txtLugar").val(),
+			direccion: $("#txtDireccion").val(),
+			dia_inicio: $("#txtFechaInicio").val(),
+			dia_fin: $("#txtFechaFin").val(),
+			hora_inicio: $("#txtHoraInicio").val(),
+			hora_fin: $("#txtHoraFin").val(),
+			descripcion: CKEDITOR.instances['txtDescripcionEvento'].getData(),
+		}
+		$.ajax({
+   		type: "POST",
+   		url: BASE_URL + "evento/guardar_detalle",
+   		data: {data: JSON.stringify(evento), csrfmiddlewaretoken: CSRF},
+   		async: false,
+   		success: function(data){
+				console.log("success");
+				console.log(data);
+   		},
+   		error: function(data){
+				console.log("error");
+				console.log(data);
+   		}
+   	});
+	}
 });

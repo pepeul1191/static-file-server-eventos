@@ -6,17 +6,18 @@
         <h4 class="modal-title">{{titulo_modal}}</h4>
       </div>
       <div class="modal-body">
-        <label class="texto-der" id="txtMensajeRptaUsuarioDetalle"></label>
+        <label class="texto-der" id="txtMensajeRptaEventoDetalle"></label>
+        <label class="" id="lblIdEvento">{{id}}</label>
         <div class="row">
           <div class="col-md-6">
               <div class="form-group">
-                <label for="txtUsuario">Nombre</label><span class="texto-validacion"></span>
+                <label for="txtNombre">Nombre</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtNombre" value="{{nombre}}">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="txtCorreo">Nombre URL</label><span class="texto-validacion"></span>
+                <label for="txtNombreURL">Nombre URL</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtNombreURL" value="{{nombre_url}}">
               </div>
             </div>
@@ -24,13 +25,13 @@
         <div class="row">
           <div class="col-md-4">
               <div class="form-group">
-                <label for="txtUsuario">Lugar</label><span class="texto-validacion"></span>
+                <label for="txtLugar">Lugar</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtLugar" value="{{lugar}}">
               </div>
             </div>
             <div class="col-md-8">
               <div class="form-group">
-                <label for="txtCorreo">Dirección</label><span class="texto-validacion"></span>
+                <label for="txtDireccion">Dirección</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtDireccion" value="{{direccion}}">
               </div>
             </div>
@@ -38,25 +39,25 @@
         <div class="row">
           <div class="col-md-3">
               <div class="form-group">
-                <label for="txtUsuario">Fecha Inicio</label><span class="texto-validacion"></span>
+                <label for="txtFechaInicio">Fecha Inicio</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtFechaInicio" value="{{dia_inicio}}">
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group">
-                <label for="txtCorreo">Fecha Fin</label><span class="texto-validacion"></span>
+                <label for="txtFechaFin">Fecha Fin</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtFechaFin" value="{{dia_fin}}">
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group">
-                <label for="txtUsuario">Hora Inicio</label><span class="texto-validacion"></span>
+                <label for="txtHoraInicio">Hora Inicio</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtHoraInicio" value="{{hora_inicio}}">
               </div>
             </div>
             <div class="col-md-3">
               <div class="form-group">
-                <label for="txtCorreo">Hora Fin</label><span class="texto-validacion"></span>
+                <label for="txtHoraFin">Hora Fin</label><span class="texto-validacion"></span>
                 <input type="text" class="form-control" id="txtHoraFin" value="{{hora_fin}}">
               </div>
             </div>
@@ -64,8 +65,8 @@
         <div class="row">
           <div class="col-md-12">
               <div class="form-group">
-                <label for="txtUsuario">Descripción del Evento</label><span class="texto-validacion"></span>
-                <textarea name="txtDescripcionEvento" id="txtDescripcionEvento"><p>Initial editor content.</p></textarea>
+                <label for="txtDescripcionEvento">Descripción del Evento</label><span class="texto-validacion"></span>
+                <textarea name="txtDescripcionEvento" id="txtDescripcionEvento"></textarea>
               </div>
             </div>
         </div>

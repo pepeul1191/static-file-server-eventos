@@ -19,3 +19,4 @@ Fuentes:
 + https://github.com/expressjs
 + http://timepicker.co/
 + https://docs.ckeditor.com/ckeditor4/latest/guide/dev_framed.html
++ https://stackoverflow.com/questions/3799317/how-can-i-get-content-of-ckeditor-using-jquery
