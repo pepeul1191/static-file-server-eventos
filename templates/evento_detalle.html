@@ -63,10 +63,29 @@
         </div>
         <div class="row">
           <div class="col-md-12">
+              <div class="form-group">
+                <label for="txtUsuario">Descripción del Evento</label><span class="texto-validacion"></span>
+                <textarea name="txtDescripcionEvento" id="txtDescripcionEvento"><p>Initial editor content.</p></textarea>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <button type="button" class="btn btn-default pull-right" id="btnGuardarDetalleEvento"><i class="fa fa-check" aria-hidden="true"></i>Guardar Cambios</button>
           </div>
         </div>
         <hr>
+        <div class="row" style="margin-bottom:20px">
+          <h4 class="modal-title">Imagen del Evento</h4>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+              <div class="form-group">
+                <label for="txtUsuario">Fecha Inicio</label><span class="texto-validacion"></span>
+                <input type="text" class="form-control" id="txtFechaInicio" value="{{dia_inicio}}">
+              </div>
+            </div>
+        </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div>

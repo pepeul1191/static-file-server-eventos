@@ -90,5 +90,6 @@ var EventoDetalleView = Backbone.View.extend({
 			dropdown: true,
 			scrollbar: true
 		});
+		CKEDITOR.replace('txtDescripcionEvento');
 	},
 });
