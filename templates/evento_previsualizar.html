@@ -1,0 +1,21 @@
+<script id="evento-previsualizar-template" type="text/x-handlebars-template">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{{titulo_modal}}</h4>
+      </div>
+      <div class="modal-body">
+        <h4>URL del Evento</h4>
+        <br>
+        <a href="{{BASE_URL}}evento/{{nombre_url}}">{{BASE_URL}}evento/{{nombre_url}}</a>
+        <h1 class="page-header">{{nombre}}</h1>
+				<img class="img-responsive" src="{{STATIC_URL}}assets/img/ing_industrial_2017-04-26_miercoles_de_ingenieria_biopolimero-papa_600x300.jpg" alt="">
+				<br>
+				<b>{{dia_inicio}} | De {{hora_inicio}} a {{hora_fin}} | {{lugar}}</b>
+				<br><br>
+				{{{descripcion}}}
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+</script>

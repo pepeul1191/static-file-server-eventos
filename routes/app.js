@@ -31,17 +31,10 @@ var Router = Marionette.AppRouter.extend({
     },
     eventoEditar: function(evento_id){
       eventoDetalleView.renderEditar(evento_id);
-      //var usuarioRolPermisoView = new UsuarioRolPermisoView({});
-      //usuarioRolPermisoView.render(usuario_id);
-      //$("#idUsuario").html(usuario_id);
-      //usuarioDetalleView.mostrarTabla(usuario_id);
     },
     eventoVer: function(evento_id){
-      alert("eventoVer" + evento_id);
-      //var usuarioRolPermisoView = new UsuarioRolPermisoView({});
-      //usuarioRolPermisoView.render(usuario_id);
-      //$("#idUsuario").html(usuario_id);
-      //usuarioDetalleView.mostrarTabla(usuario_id);
+      var eventoPrevisualizar = new EventoPrevisualizar({});
+      eventoPrevisualizar.render(evento_id);
     },
     eventoParticipantes: function(evento_id){
       alert("eventoParticipantes" + evento_id);
