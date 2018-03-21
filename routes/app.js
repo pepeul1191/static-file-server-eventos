@@ -12,9 +12,6 @@ var Router = Marionette.AppRouter.extend({
       "alumno": "alumno",
       "empleado": "empleado",
       "externo": "externo",
-      /*
-      "accesos/usuario/roles_permisos/:usuario_id" : "showUsuarioRolesPermisos",
-      */
       "*actions" : "index"
     },
     showEmail: function(email) {
@@ -32,23 +29,8 @@ var Router = Marionette.AppRouter.extend({
     eventoCrear: function() {
       eventoDetalleView.renderCrear();
     },
-    alumno: function() {
-      var alumnoView = new AlumnoView({});
-      alumnoView.render();
-      alumnoView.mostrarTabla();
-    },
-    empleado: function() {
-      var empleadoView = new EmpleadoView({});
-      empleadoView.render();
-      empleadoView.mostrarTabla();
-    },
-    externo: function() {
-      var externoView = new ExternoView({});
-      externoView.render();
-      externoView.mostrarTabla();
-    },
     eventoEditar: function(evento_id){
-      alert("eventoEditar" + evento_id);
+      eventoDetalleView.renderEditar(evento_id);
       //var usuarioRolPermisoView = new UsuarioRolPermisoView({});
       //usuarioRolPermisoView.render(usuario_id);
       //$("#idUsuario").html(usuario_id);
@@ -67,6 +49,21 @@ var Router = Marionette.AppRouter.extend({
       //usuarioRolPermisoView.render(usuario_id);
       //$("#idUsuario").html(usuario_id);
       //usuarioDetalleView.mostrarTabla(usuario_id);
+    },
+    alumno: function() {
+      var alumnoView = new AlumnoView({});
+      alumnoView.render();
+      alumnoView.mostrarTabla();
+    },
+    empleado: function() {
+      var empleadoView = new EmpleadoView({});
+      empleadoView.render();
+      empleadoView.mostrarTabla();
+    },
+    externo: function() {
+      var externoView = new ExternoView({});
+      externoView.render();
+      externoView.mostrarTabla();
     },
 });
 

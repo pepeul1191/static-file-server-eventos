@@ -34,9 +34,26 @@ var Evento = Backbone.Model.extend({
     usuario.contrasenia = $("#txtContraseniaNueva").val();
     return usuario;
   },
+  id: function(evento_id){
+    var rpta = null;
+		$.ajax({
+   		type: "GET",
+   		url: BASE_URL + "evento/_id?",
+   		data: {_id: evento_id, csrfmiddlewaretoken: CSRF},
+   		async: false,
+   		success: function(data){
+				rpta = data;
+   		},
+   		error: function(data){
+				console.log("error");
+				rpta = data;
+   		}
+   	});
+    return rpta;
+  },
   guardar: function(){
     var evento = {
-			id: $("#lblIdEvento").html(),
+			_id: $("#lblIdEvento").html(),
 			nombre: $("#txtNombre").val(),
 			nombre_url: $("#txtNombreURL").val(),
 			lugar: $("#txtLugar").val(),
