@@ -1,3 +1,5 @@
+var eventoDetalleView = new EventoDetalleView({});
+
 var Router = Marionette.AppRouter.extend({
     routes: {
       'email/:email': 'showEmail',
@@ -25,7 +27,6 @@ var Router = Marionette.AppRouter.extend({
       eventoView.mostrarTabla();
     },
     eventoCrear: function() {
-      var eventoDetalleView = new EventoDetalleView({});
       eventoDetalleView.renderCrear();
     },
     alumno: function() {

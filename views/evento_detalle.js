@@ -99,31 +99,20 @@ var EventoDetalleView = Backbone.View.extend({
 		CKEDITOR.replace('txtDescripcionEvento');
 	},
 	guardarDetalleEvento: function(){
-		var evento = {
-			id: $("#lblIdEvento").html(),
-			nombre: $("#txtNombre").val(),
-			nombre_url: $("#txtNombreURL").val(),
-			lugar: $("#txtLugar").val(),
-			direccion: $("#txtDireccion").val(),
-			dia_inicio: $("#txtFechaInicio").val(),
-			dia_fin: $("#txtFechaFin").val(),
-			hora_inicio: $("#txtHoraInicio").val(),
-			hora_fin: $("#txtHoraFin").val(),
-			descripcion: CKEDITOR.instances['txtDescripcionEvento'].getData(),
+		var rpta = this.model.guardar();
+		rpta = JSON.parse(rpta);
+		if(rpta['tipo_mensaje'] == "error"){
+			$("#txtMensajeRptaEventoDetalle").removeClass("color-success");
+			$("#txtMensajeRptaEventoDetalle").addClass("color-rojo");
+			$("#txtMensajeRptaEventoDetalle").html(rpta['mensaje'][0]);
+		}else{
+			$("#txtMensajeRptaEventoDetalle").removeClass("color-rojo");
+			$("#txtMensajeRptaEventoDetalle").addClass("color-success");
+			$("#txtMensajeRptaEventoDetalle").html(rpta['mensaje'][0]);
+			if ($("#lblIdEvento").html() == "E"){
+				$("#lblIdEvento").html(rpta['mensaje'][1]);
+				$(".modal-title").html("Editar Evento");
+			}
 		}
-		$.ajax({
-   		type: "POST",
-   		url: BASE_URL + "evento/guardar_detalle",
-   		data: {data: JSON.stringify(evento), csrfmiddlewaretoken: CSRF},
-   		async: false,
-   		success: function(data){
-				console.log("success");
-				console.log(data);
-   		},
-   		error: function(data){
-				console.log("error");
-				console.log(data);
-   		}
-   	});
-	}
+	},
 });

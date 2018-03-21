@@ -34,4 +34,33 @@ var Evento = Backbone.Model.extend({
     usuario.contrasenia = $("#txtContraseniaNueva").val();
     return usuario;
   },
+  guardar: function(){
+    var evento = {
+			id: $("#lblIdEvento").html(),
+			nombre: $("#txtNombre").val(),
+			nombre_url: $("#txtNombreURL").val(),
+			lugar: $("#txtLugar").val(),
+			direccion: $("#txtDireccion").val(),
+			dia_inicio: $("#txtFechaInicio").val(),
+			dia_fin: $("#txtFechaFin").val(),
+			hora_inicio: $("#txtHoraInicio").val(),
+			hora_fin: $("#txtHoraFin").val(),
+			descripcion: CKEDITOR.instances['txtDescripcionEvento'].getData(),
+		}
+    var rpta = null;
+		$.ajax({
+   		type: "POST",
+   		url: BASE_URL + "evento/guardar_detalle",
+   		data: {data: JSON.stringify(evento), csrfmiddlewaretoken: CSRF},
+   		async: false,
+   		success: function(data){
+				rpta = data;
+   		},
+   		error: function(data){
+				console.log("error");
+				rpta = data;
+   		}
+   	});
+    return rpta;
+  }
 });

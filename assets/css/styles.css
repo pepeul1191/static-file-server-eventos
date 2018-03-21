@@ -39,3 +39,4 @@ footer.nb-footer .copyright p { margin: 0; padding: 0; padding-left: 10px;}
 .form-control { font-size: 11px; border-radius: 0px; height: 27px;}
 .ui-datepicker { background: white; border: 1px solid #ccc;}
 .ui-timepicker-container{z-index: 2000 !important}
+.texto-der{float: right;}
