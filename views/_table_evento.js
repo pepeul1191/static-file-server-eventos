@@ -27,13 +27,13 @@ var evento_array_json_td = [
 ];
 
 var evento_array_json_btn_td = [
-	{clase:"fa fa-chevron-right", href:"#/accesos/sistemas/menu/", alt:"Gestionar Menú",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
+	{clase:"fa fa-chevron-right", href:"#/evento/crear", alt:"Gestionar Menú",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
 	{clase:"fa fa-list",href:"#/accesos/sistemas/permiso/",alt:"Gestionar Permisos",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
 	{clase:"fa fa-id-card-o",href:"#/accesos/sistemas/rol/",alt:"Gestionar Roles",estilos:"padding-left: 2px;", tipo:"btn_td_href", operacion:"IrURL"},
 	{clase:"fa fa-times",url:"",alt:"Eliminar capa",estilos:"padding-left: 2px;", operacion:"QuitarFila"}
 ];
 
 var evento_array_json_btn = [
-	{tipo: "agrega_fila", operacion:"AgregarFila", icono: "fa fa-plus", label: "Agregar Registro", clase: "boton-tabla  mootools"},
+	{tipo: "agrega_fila_link", link:"#/evento/crear", operacion:"AccionURL", icono: "fa fa-plus", label: "Agregar Registro", clase: "boton-tabla  mootools"},
 	{tipo: "guardar_tabla", operacion:"GuardarTabla", icono: "fa fa-check", label: "Guardar Cambios", clase: "boton-tabla  mootools" }
 ];
