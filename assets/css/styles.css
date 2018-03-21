@@ -9,7 +9,8 @@ body{font-size: 11px}
 .color-success{color: #3c763d;}
 .oculto{display: none}
 label{font-weight: 500;}
-.modal-body {padding-left: 35px; padding-right: 35px;}
+button>i{margin-right: 5px}
+.modal-body {padding-left: 35px; padding-right: 35px; padding-top: 0px;}
 @media (min-width: 768px){
 	.navbar-nav>li>a {padding-top: 10px; padding-bottom: 10px;}
 	.navbar {border-radius: 0px;}
@@ -36,3 +37,5 @@ footer.nb-footer .copyright p { margin: 0; padding: 0; padding-left: 10px;}
     border-radius: 0px;}
 .boton-tabla:hover, .btn-default:hover{color: #343434 !important; background-color: #e7e7e7!important;border-color: #ccc !important; font-size: 11px; border-radius: 0px; padding:5px;}
 .form-control { font-size: 11px; border-radius: 0px; height: 27px;}
+.ui-datepicker { background: white; border: 1px solid #ccc;}
+.ui-timepicker-container{z-index: 2000 !important}
