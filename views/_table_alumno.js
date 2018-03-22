@@ -4,10 +4,7 @@ var alumno_array_json_th = [
   {titulo:"DNI",index:"dni",estilos:"width: 70px;"},
 	{titulo:"Apellido Paterno",index:"paterno",estilos:"width: 120px;"},
   {titulo:"Apellido Materno",index:"materno",estilos:"width: 120px;"},
-  {titulo:"Nombre",index:"nombres",estilos:"width: 100px;"},
-  {titulo:"Correo Alumno",index:"correo_alumno",estilos:"width: 120px;"},
-  {titulo:"Correo Personal",index:"correo_personal",estilos:"width: 120px;"},
-  {titulo:"Celuluar",index:"celular",estilos:"width: 90px;"},
+  {titulo:"Nombres",index:"nombres",estilos:"width: 100px;"},
 	{titulo:"Botones",index:"NA",estilos:"width: 40px; padding-left: 0px;"}
 ];
 
@@ -18,9 +15,6 @@ var alumno_array_json_td = [
 	{tipo:"label",estilos:"width:120px;", index:"paterno", edicion:""},
   {tipo:"label",estilos:"width:120px;", index:"materno", edicion:""},
   {tipo:"label",estilos:"width:100px;", index:"nombres", edicion:""},
-  {tipo:"label",estilos:"width:120px;", index:"correo_alumno", edicion:""},
-  {tipo:"label",estilos:"width:120px;", index:"correo_personal", edicion:""},
-  {tipo:"label",estilos:"width:120px;", index:"celular", edicion:""},
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 
