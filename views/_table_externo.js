@@ -4,8 +4,6 @@ var externo_array_json_th = [
 	{titulo:"Apellido Paterno",index:"paterno",estilos:"width: 120px;"},
   {titulo:"Apellido Materno",index:"materno",estilos:"width: 120px;"},
   {titulo:"Nombre",index:"nombres",estilos:"width: 100px;"},
-  {titulo:"Correo Personal",index:"correo",estilos:"width: 120px;"},
-  {titulo:"Teléfono",index:"telefono",estilos:"width: 90px;"},
 	{titulo:"Botones",index:"NA",estilos:"width: 60px; padding-left: 5px;"}
 ];
 
@@ -15,8 +13,6 @@ var externo_array_json_td = [
 	{tipo:"label",estilos:"width:120px;", index:"paterno", edicion:""},
   {tipo:"label",estilos:"width:120px;", index:"materno", edicion:""},
   {tipo:"label",estilos:"width:100px;", index:"nombres", edicion:""},
-  {tipo:"label",estilos:"width:120px;", index:"correo", edicion:""},
-  {tipo:"label",estilos:"width:120px;", index:"telefono", edicion:""},
 	{tipo:"botones", index:"botones", edicion:"true"}
 ];
 

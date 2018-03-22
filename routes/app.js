@@ -14,6 +14,7 @@ var Router = Marionette.AppRouter.extend({
       "empleado": "empleado",
       "empleado/ver/:empleado_id" : "empleadoVer",
       "externo": "externo",
+      "externo/ver/:externo_id" : "externoVer",
       "*actions" : "index"
     },
     showEmail: function(email) {
@@ -67,6 +68,10 @@ var Router = Marionette.AppRouter.extend({
       var externoView = new ExternoView({});
       externoView.render();
       externoView.mostrarTabla();
+    },
+    externoVer: function(externo_id){
+      var externoVer = new ExternoDetalle({});
+      externoVer.render(externo_id);
     },
 });
 
