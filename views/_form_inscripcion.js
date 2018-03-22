@@ -10,8 +10,9 @@ var FormInscripcionView = Backbone.View.extend({
 		var context = { };
 		if(this.vista_html.template == "form_alumno.html"){
 			source = $("#alumno-inscripcion-template").html();
-		}else{
-
+		}
+		if(this.vista_html.template == "form_empleado.html"){
+			source = $("#empleado-inscripcion-template").html();
 		}
 		var template = Handlebars.compile(source);
 		var html = template(context);

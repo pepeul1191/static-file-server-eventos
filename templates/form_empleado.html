@@ -1,1 +1,41 @@
-<h1>Empleado</h1>
+<script id="empleado-inscripcion-template" type="text/x-handlebars-template">
+  <h5>Sólo es necesario que ingrese su código de empleado, ya que el correo por defecto a considerar será su correo laboral y su teléfono registrado en MiULima. En caso que quiera considrar otro correo y/o teléfono para el presente evento, tiene los campos de Correo Electrónico Adicional y Teléfono Adicional: </h5>
+  <div class="form-group">
+    <label for="txtCodigoEmpleado"><span class="req">* </span> Código de Empleado: </label>
+    <input type="text" id="txtCodigoEmpleado" class="form-control phone" maxlength="8" onkeyup="validatephone(this);" placeholder="Ingrese su código de empleado"/>
+  </div>
+  <div class="form-group">
+    <label for="txtNombres"></span> Nombres: </label>
+    <input class="form-control" type="text" id = "txtNombres" disabled />
+  </div>
+  <div class="form-group">
+    <label for="txtPaterno"></span> Apellido Paterno: </label>
+    <input class="form-control" type="text" id = "txtPaterno" disabled />
+  </div>
+  <div class="form-group">
+    <label for="txtMaterno"></span> Apellido Materno: </label>
+    <input class="form-control" type="text" id = "txtMaterno" disabled />
+  </div>
+  <div class="form-group">
+    <label for="txtCorreoAdicional"></span> Correo Electrónico Adicional: </label>
+    <input class="form-control" type="email"  id = "txtCorreoAdicional"  placeholder="Por defecto se usará su correo de alumno ULima" />
+  </div>
+  <div class="form-group">
+    <label for="txtTeléfonoAdicional"></span> Teléfono Adicional: </label>
+    <input class="form-control" type="email"  id = "txtTeléfonoAdicional"  placeholder="Por defecto se usará su teléfono registrado en MiUlima" />
+  </div>
+  <div class="form-group">
+    <div class="col-md-1">
+      <input type="checkbox" id="field_terms">
+    </div>
+    <div class="col-md-11">
+      <label for="terms">Declaro haber leído la <a target="_blank"  href="http://contenidos.ulima.edu.pe/politica/PoliticadeProtecciondeDatosPersonales.pdf" title="You may read our terms and conditions by clicking on this link">política de protección de datos personales de la Universidad de Lima</a> y doy mi consentimiento para el tratamiento de mis datos personales de acuerdo a los términos de esta. for Registration.</label>
+    </div>
+    <hr>
+  </div>
+  <div class="form-group" style="margin-top:70px; position:relative">
+    <button class="btn btn-success" type="button" name="button" disabled>Inscribirse</button>
+  </div>
+  <h5>Recibirás un correo electrónico para confirmar el registro.</h5>
+  <h5>Asegúrese de revisar sus carpetas de spam.</h5>
+</script>
