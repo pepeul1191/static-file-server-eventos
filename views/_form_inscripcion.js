@@ -5,20 +5,28 @@ var FormInscripcionView = Backbone.View.extend({
     this.render();
 	},
   render: function() {
-    this.$el.html(this.getTemplate());
+		this.$el.html(this.getTemplate());
+		var source = null;
+		var context = { };
+		if(this.vista_html.template == "form_alumno.html"){
+			source = $("#alumno-inscripcion-template").html();
+		}else{
+
+		}
+		var template = Handlebars.compile(source);
+		var html = template(context);
+		this.$el.html(html);
 	},
 	getTemplate: function() {
-		var data = { };
-		var template_compiled = null;
+		var template = null;
 		$.ajax({
 		   url: STATICS_URL + 'templates/' + this.vista_html.template,
 		   type: "GET",
 		   async: false,
 		   success: function(source) {
-         var template = Handlebars.compile(source);
-		   	 template_compiled = template(data);
+         template = source
 		   }
 		});
-		return template_compiled;
+		return template;
 	},
 });
