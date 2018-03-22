@@ -1,4 +1,4 @@
-var EstacionSensorView = Backbone.View.extend({
+var FormInscripcionView = Backbone.View.extend({
 	el: '#form-registro',
   initialize: function(vista_html){
     this.vista_html = vista_html;
@@ -10,7 +10,6 @@ var EstacionSensorView = Backbone.View.extend({
 	getTemplate: function() {
 		var data = { };
 		var template_compiled = null;
-    console.log(this.vista_html);
 		$.ajax({
 		   url: STATICS_URL + 'templates/' + this.vista_html.template,
 		   type: "GET",

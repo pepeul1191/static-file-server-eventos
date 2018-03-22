@@ -1,5 +1,6 @@
 $(document).ready(function(){
   // mapa
+  /*
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -11.729697, lng: -75.28832},
     zoom: 10
@@ -9,6 +10,7 @@ $(document).ready(function(){
     map: map,
     title: 'Hello World!'
   });
+  */
   // select de relacion con la Universidad
   var source   = document.getElementById("hb-form-group-relacion").innerHTML;
   var template = Handlebars.compile(source);
@@ -21,7 +23,9 @@ $(document).ready(function(){
   var template_compiled = template(context);
   $("#form-group-relacion").html(template_compiled);
   // demo
-  console.log(window.location.pathname);
+  // renderizar el deatlle del evento
+  eventoInscripcion = new EventoInscripcion();
+  eventoInscripcion.render();
   // select de origenes renderiza formulario
   $("#slc-origen").change(function(event) {
     var id = $(this).children(":selected").val();
@@ -30,13 +34,13 @@ $(document).ready(function(){
       alert("ERROR!!!");
       break;
     case "1": // Alumno/Exalumno
-      var estacionSensorView = new EstacionSensorView({template: "form_alumno.html",});
+      var estacionSensorView = new FormInscripcionView({template: "form_alumno.html",});
       break;
     case "2": // Empleado
-      var estacionSensorView = new EstacionSensorView({template: "form_empleado.html",});
+      var estacionSensorView = new FormInscripcionView({template: "form_empleado.html",});
       break;
     case "3": // Externo
-      var estacionSensorView = new EstacionSensorView({template: "form_externo.html",});
+      var estacionSensorView = new FormInscripcionView({template: "form_externo.html",});
       break;
     default:
       //TODO
