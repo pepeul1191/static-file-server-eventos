@@ -12,6 +12,7 @@ var Router = Marionette.AppRouter.extend({
       "alumno": "alumno",
       "alumno/ver/:alumno_id" : "alumnoVer",
       "empleado": "empleado",
+      "empleado/ver/:empleado_id" : "empleadoVer",
       "externo": "externo",
       "*actions" : "index"
     },
@@ -57,6 +58,10 @@ var Router = Marionette.AppRouter.extend({
       var empleadoView = new EmpleadoView({});
       empleadoView.render();
       empleadoView.mostrarTabla();
+    },
+    empleadoVer: function(empleado_id){
+      var empleadoVer = new EmpleadoDetalle({});
+      empleadoVer.render(empleado_id);
     },
     externo: function() {
       var externoView = new ExternoView({});

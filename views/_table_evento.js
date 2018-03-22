@@ -1,5 +1,5 @@
 var evento_array_json_th = [
-	{titulo:"id", index: "_id", estilos:"width: 10px; display:none;"},
+	{titulo:"id", index: "id", estilos:"width: 10px; display:none;"},
 	{titulo:"Nombre",index:"nombre",estilos:"width: 250px;"},
   {titulo:"Dia Inicio",index:"dia_inicio",estilos:"width: 100px;"},
   {titulo:"Dia Fin",index:"dia_fin",estilos:"width: 100px;"},
@@ -9,7 +9,7 @@ var evento_array_json_th = [
 ];
 
 var evento_array_json_td = [
-	{tipo:"label_id",estilos:"color: blue; display:none", index:"_id", edicion:""},
+	{tipo:"label_id",estilos:"color: blue; display:none", index:"id", edicion:""},
 	{tipo:"label",estilos:"width:250px;", index:"nombre", edicion:""},
   {tipo:"label",estilos:"width:100px;", index:"dia_inicio", edicion:""},
   {tipo:"label",estilos:"width:100px;", index:"dia_fin", edicion:""},

@@ -1,0 +1,58 @@
+<script id="empleado-detelle-template" type="text/x-handlebars-template">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Detalle del Empleado</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="txtDNI">DNI</label>
+              <input type="text" class="form-control" id="txtDNI" value="{{dni}}" disabled>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="txtCodigo">Código de Empleado</label>
+              <input type="text" class="form-control" id="txtCodigo" value="{{codigo}}" disabled>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="txtCorreoAlumno">Correo Laboral</label>
+              <input type="text" class="form-control" id="txtCorreoAlumno" value="{{correo_laboral}}" disabled>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="txtCorreoPersonal">Correo Personal</label>
+              <input type="text" class="form-control" id="txtCorreoPersonal" value="{{correo_personal}}" disabled>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="txtNombres">Nombres</label>
+              <input type="text" class="form-control" id="txtNombres" value="{{nombres}}" disabled>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="txtPaterno">Apellido Paterno</label>
+              <input type="text" class="form-control" id="txtPaterno" value="{{paterno}}" disabled>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="txtMaterno">Apellido Paterno</label>
+              <input type="text" class="form-control" id="txtMaterno" value="{{materno}}" disabled>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+</script>
