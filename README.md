@@ -8,9 +8,13 @@ Arrancar aplicación servidor:
 
     $ npm start
 
-Tareas gulp:
+Tareas gulp para 'BASE_URL/administracion':
 
-    $ gulp app
+    $ gulp fonts app
+
+Tareas gulp para 'BASE_URL/login':
+
+    $ gulp login
 
 ---
 

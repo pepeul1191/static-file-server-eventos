@@ -16,6 +16,14 @@ function errorLog(error){
   this.emit("end");
 }
 
+gulp.task("fonts", function(){
+  gulp.src([
+    MEDIA + 'bower_components/font-awesome/fonts/*',
+    MEDIA + 'bower_components/bootstrap/fonts/*',
+  ])
+  .pipe(gulp.dest(DESTINO));
+});
+
 gulp.task("login", function(){
   //JS
   //FONTS
@@ -53,11 +61,27 @@ gulp.task("app", function(){
     MEDIA + "bower_components/swp-plugins/assets/js/mootools.form.js",
     MEDIA + "bower_components/swp-plugins/assets/js/mootools.observer.js",
     MEDIA + "bower_components/swp-plugins/assets/js/mootools.grid.js",
+    MEDIA + "bower_components/jquery-ui/ui/widgets/datepicker.js",
+    MEDIA + "bower_components/jquery-timepicker-wvega/jquery.timepicker.js",
+    MEDIA + "bower_components/ckeditor/ckeditor.js",
     MEDIA + "layouts/app.js",
+    MEDIA + "models/evento.js",
+    MEDIA + "models/alumno.js",
+    MEDIA + "models/empleado.js",
+    MEDIA + "models/externo.js",
+    MEDIA + "views/_table_evento.js",
+    MEDIA + "views/_table_alumno.js",
+    MEDIA + "views/_table_empleado.js",
+    MEDIA + "views/_table_externo.js",
     MEDIA + "views/alumno.js",
+    MEDIA + "views/alumno_detalle.js",
     MEDIA + "views/empleado.js",
+    MEDIA + "views/empleado_detalle.js",
     MEDIA + "views/evento.js",
     MEDIA + "views/externo.js",
+    MEDIA + "views/externo_detalle.js",
+    MEDIA + "views/evento_detalle.js",
+    MEDIA + "views/evento_previsualizar.js",
     MEDIA + "routes/app.js",
   ])
   .pipe(concatJs("app.js"))
@@ -73,11 +97,6 @@ gulp.task("app", function(){
   .pipe(plumber())
   .pipe(gulp.dest(DESTINO));
   //FONTS
-  gulp.src([
-    MEDIA + 'bower_components/font-awesome/fonts/*',
-    MEDIA + 'bower_components/bootstrap/fonts/*',
-  ])
-  .pipe(gulp.dest(DESTINO));
   //CSS
   gulp.src([
     MEDIA + "bower_components/bootstrap/dist/css/bootstrap.min.css",
