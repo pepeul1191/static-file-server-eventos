@@ -24,8 +24,10 @@ $(document).ready(function(){
   $("#form-group-relacion").html(template_compiled);
   // demo
   // renderizar el deatlle del evento
-  eventoInscripcion = new EventoInscripcion();
+  var eventoInscripcion = new EventoInscripcion();
   eventoInscripcion.render();
+    // initialize el form de registro
+  var formInscripcionView = new FormInscripcionView({});
   // select de origenes renderiza formulario
   $("#slc-origen").change(function(event) {
     var id = $(this).children(":selected").val();
@@ -34,13 +36,13 @@ $(document).ready(function(){
       alert("ERROR!!!");
       break;
     case "1": // Alumno/Exalumno
-      var estacionSensorView = new FormInscripcionView({template: "form_alumno.html",});
+      formInscripcionView.render({template: "form_alumno.html",});
       break;
     case "2": // Empleado
-      var estacionSensorView = new FormInscripcionView({template: "form_empleado.html",});
+      formInscripcionView.render({template: "form_empleado.html",});
       break;
     case "3": // Externo
-      var estacionSensorView = new FormInscripcionView({template: "form_externo.html",});
+      formInscripcionView.render({template: "form_externo.html",});
       break;
     default:
       //TODO
@@ -48,7 +50,3 @@ $(document).ready(function(){
     }
   });
 });
-
-function cargarFormularioRegistro(vista_html){
-
-}

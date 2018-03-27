@@ -2,7 +2,9 @@
   <h5>Sólo es necesario que ingrese su código de alumno, ya que el correo por defecto a considerar será su correo de alumno y su teléfono registrado en MiULima. En caso que quiera considrar otro correo y/o teléfono para el presente evento, tiene los campos de Correo Electrónico Adicional y Teléfono Adicional: </h5>
   <div class="form-group">
     <label for="txtCodigoAlumno"><span class="req">* </span> Código de Alumno: </label>
-    <input type="text" id="txtCodigoAlumno" class="form-control phone" maxlength="8" onkeyup="validatephone(this);" placeholder="Ingrese su código de alumno"/>
+    <label id="lblIdAlumno" class="oculto"></label>
+    <label id="lblIdEvento" class=""></label>
+    <input type="text" id="txtCodigoAlumno" class="form-control phone" maxlength="8" placeholder="Ingrese su código de alumno"/>
   </div>
   <div class="form-group">
     <label for="txtNombres"></span> Nombres: </label>
@@ -34,7 +36,7 @@
     <hr>
   </div>
   <div class="form-group" style="margin-top:70px; position:relative">
-    <button class="btn btn-success" type="button" name="button" disabled>Inscribirse</button>
+    <button class="btn btn-success" type="button" name="button" id="btnInscribirse" disabled>Inscribirse</button>
   </div>
   <h5>Recibirás un correo electrónico para confirmar el registro.</h5>
   <h5>Asegúrese de revisar sus carpetas de spam.</h5>
