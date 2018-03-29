@@ -62,6 +62,11 @@ var FormInscripcionView = Backbone.View.extend({
 					url = "registro/alumno"
 	      break;
 	    case "empleado": // Empleado
+				datos.id = $("#lblIdEmpleado").html();
+				datos.evento_id = $("#lblIdEvento").html();
+				datos.correo_adicional = $("#txtCorreoAdicional").val();
+				datos.telefono_adicional = $("#txtTelefonoAdicional").val();
+				url = "registro/empleado"
 	      break;
 	    case "externo": // Externo
 	      break;
@@ -106,7 +111,26 @@ var FormInscripcionView = Backbone.View.extend({
 		}
 	},
 	buscarEmpleadoCodigo: function(event) {
-		alert("buscarEmpleadoCodigo");
+		var input = $(event.target);
+		var rpta = null;
+		$.ajax({
+			 url: BASE_URL + 'evento/empleado/codigo_buscar/' + input.val(),
+			 type: "GET",
+			 async: false,
+			 success: function(data) {
+				 rpta = data;
+			 }
+		});
+		if (rpta == "null"){
+			alert("Código de alumno ingresado no encontrado");
+			//input.focus();
+		}else{
+			var empleado = JSON.parse(rpta);
+			$("#lblIdEmpleado").html(empleado.id);
+			$("#txtNombres").val(empleado.nombres);
+			$("#txtPaterno").val(empleado.paterno);
+			$("#txtMaterno").val(empleado.materno);
+		}
 	},
 	buscarExternoDNI: function(event) {
 		alert("buscarExternoDNI");

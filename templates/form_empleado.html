@@ -2,7 +2,9 @@
   <h5>Sólo es necesario que ingrese su código de empleado, ya que el correo por defecto a considerar será su correo laboral y su teléfono registrado en MiULima. En caso que quiera considrar otro correo y/o teléfono para el presente evento, tiene los campos de Correo Electrónico Adicional y Teléfono Adicional: </h5>
   <div class="form-group">
     <label for="txtCodigoEmpleado"><span class="req">* </span> Código de Empleado: </label>
-    <input type="text" id="txtCodigoEmpleado" class="form-control phone" maxlength="8" onkeyup="validatephone(this);" placeholder="Ingrese su código de empleado"/>
+    <label id="lblIdEmpleado" class="oculto"></label>
+    <label id="lblIdEvento" class=""></label>
+    <input type="text" id="txtCodigoEmpleado" class="form-control phone" maxlength="8" placeholder="Ingrese su código de empleado"/>
   </div>
   <div class="form-group">
     <label for="txtNombres"></span> Nombres: </label>
