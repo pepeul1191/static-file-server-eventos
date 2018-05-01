@@ -6,7 +6,10 @@ var EventoDetalleView = Backbone.View.extend({
 		this.model = new Evento();
 	},
 	events: {
-		"click #btnGuardarDetalleEvento": "guardarDetalleEvento"
+		"click #btnGuardarDetalleEvento": "guardarDetalleEvento",
+		"click #buscar_file_evento": "triggerFile",
+		"click #upload_file_evento": "subirFile",
+		"click #btnAsociarImagenEvento": "asociarImagenEvento",
 	},
 	render: function(context) {
 		$("#btnModal").click();
@@ -124,5 +127,37 @@ var EventoDetalleView = Backbone.View.extend({
 				$(".modal-title").html("Editar Evento");
 			}
 		}
+	},
+	triggerFile: function() {
+		$("#input_file_evento").trigger("click");
+	},
+	subirFile: function() {
+		//$("#view_file_dni").addClass("oculto");
+		$("#input_file_evento").upload(
+			BASE_URL + "archivo/subir",
+			{
+			 nombre : "Imagen 1 nombre",
+			 descripcion : "Imagen 1 descripcion"
+			},
+			function(mensaje){
+				if(mensaje['tipo_mensaje'] == 'success'){
+					$("#imagen_id").html(mensaje['mensaje'][1]);
+					$("#txtMensajeRptaEventoDetalle").html(mensaje['mensaje'][0]);
+					$("#txtMensajeRptaEventoDetalle").removeClass("color-rojo");
+					$("#txtMensajeRptaEventoDetalle").addClass("color-success");
+					$("#view_file").removeClass("oculto");
+					$("#btnAsociarMenuExposicion").removeClass("oculto");
+					$("#view_file").attr("href", mensaje['mensaje'][2]);
+				}else{
+					$("#txtMensajeRptaEventoDetalle").removeClass("color-success");
+					$("#txtMensajeRptaEventoDetalle").addClass("color-rojo");
+					$("#txtMensajeRptaEventoDetalle").html(mensaje['mensaje'][0]);
+				}
+				event.preventDefault();
+			},
+			$("#progbar_dni"),
+			$("#upload_file_dni")
+		);
+		event.preventDefault();
 	},
 });

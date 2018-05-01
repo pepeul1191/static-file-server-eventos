@@ -80,12 +80,18 @@
           <h4 class="modal-title">Imagen del Evento</h4>
         </div>
         <div class="row">
-          <div class="col-md-3">
-              <div class="form-group">
-                <label for="txtUsuario">Fecha Inicio</label><span class="texto-validacion"></span>
-                <input type="text" class="form-control" id="txtFechaInicio" value="{{dia_inicio}}">
-              </div>
+          <div class="col-md-6">
+            <div class="form-group" style="margin-bottom:10px">
+              <label for="txtLongitud" style="width:100%">Foto Menu</label>
+              <label id="imagen_id" class="oculto">{{foto}}</label>
+						  <input type="file" id="input_file_evento" name="myFile" type="file" class="oculto"/>
+              <button id="buscar_file_evento" {{#if disabled}}disabled{{/if}} class="btn btn-default btn-file pull-left"{{#if disable}}disabled{{/if}}><i class="fa fa-file-image-o" aria-hidden="true"></i>Buscar </button>
+              <button id="upload_file_evento" {{#if disabled}}disabled{{/if}} class="btn btn-default btn-file pull-left"{{#if disable}}disabled{{/if}}><i class="fa fa-upload" aria-hidden="true"></i>Subir </button>
+    					<a href="{{foto_url}}"  target="_blank" id="view_file" class="btn btn-default btn-file pull-left {{#ifEquals foto ''}}oculto{{/ifEquals}}"><i class="fa fa-search" aria-hidden="true" style="margin-right: 5px"></i>Ver </a>
+              <button type="button" {{#if disabled}}disabled{{/if}} class="btn btn-default {{#ifEquals foto ''}}oculto{{/ifEquals}}" id="btnAsociarMenuExposicion"><i class="fa fa-check" aria-hidden="true"></i>Asociar Imagen</button>
+    					<progress id="progbar" value="0" min="0" max="100" class="oculto" role=""></progress>
             </div>
+          </div>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

@@ -7,7 +7,7 @@ body{font-size: 11px}
 .color-rojo{color:#a94442;}
 .color-warning{color: #8a6d3b;}
 .color-success{color: #3c763d;}
-.oculto{display: none}
+.oculto{display: none !important}
 label{font-weight: 500;}
 button>i{margin-right: 5px}
 .modal-body {padding-left: 35px; padding-right: 35px; padding-top: 0px;}
@@ -19,6 +19,7 @@ button>i{margin-right: 5px}
 	.container{width: 100%;}
 }
 .btn{border-radius: 0px}
+.btn-file{margin-right: 10px; margin-bottom: 10px}
 .oculto{display: none}
 .modal-content{border-radius: 0px;}
 .container, .container-fluid { padding-left: 10px;}

@@ -56,3 +56,19 @@ Handlebars.registerHelper( "menuSubModulos", function (){
 Handlebars.registerHelper('getValue', function(obj, key) {
     return obj[key];
 });
+
+Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('fillSelect', function(lista, item_selected_id){
+	var rpta = '';
+	lista.forEach(function(item){
+		if(item.id == item_selected_id){
+			rpta = rpta + '<option value="' + item.id + '" selected>' + item.nombre + '</option>';
+		}else{
+			rpta = rpta + '<option value="' + item.id + '">' + item.nombre + '</option>';
+		}
+	});
+	return rpta;
+});
